@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+int factorial(int n){
+    int ans=1;
+    for(int i=1;i<=n;i++){
+        ans=ans*i;
+    }
+    return ans;
+}
+void sum_of_series(int sum,int x){
+    float ans=0;
+    for(int i=1;i<=sum;i++){
+        float fac=factorial(i);
+        float result=(x*i)/(fac);
+        ans=((result)+(ans));
+    }
+    cout<<(ans + 1)<<endl;
+}
+int main(){
+    int sum;
+    cout<<"enter the number of elements";
+    cin>>sum;
+    int x;
+    cout<<"enter the number";
+    cin>>x;
+    sum_of_series(sum,x);
+    return 0;
+}
